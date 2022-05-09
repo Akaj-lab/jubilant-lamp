@@ -1,0 +1,136 @@
+\documentclass[a4paper,12pt]{article}
+
+% \usepackage[a4paper,left=3cm,right=3cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage[a4paper, margin=2.54cm]{geometry}
+\usepackage[T1]{fontenc}                               % Osembitno tvorjenje črk
+\usepackage[utf8]{inputenc}                            % UTF8 enkodiranje
+\usepackage[slovene]{babel}                            % Slovenščina
+\usepackage[pdfusetitle, hidelinks, unicode]{hyperref} % Nastavi atribute PDF-ja, ne označuj povezav
+\usepackage{microtype} % Podzavestne izboljšave za tipografijsko perfekcijo :)
+\usepackage{enumitem}  % Seznami za člene
+%\usepackage{sectsty}   % Sekcijske glave
+\usepackage{graphicx}  % Vključitev slik
+\usepackage{dirtytalk} % Citat
+\usepackage{listings}  % Kodni blok
+\usepackage{fancyvrb}
+\usepackage[font=]{caption} % Required for specifying captions
+\usepackage[normalem]{ulem} % Krašanje enot v enačbi
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1ex}
+
+\title{Okoljski in trugi vplivi nuklearne elektrarne Krško}
+\author{Jaka Kovač}
+
+\begin{document}
+\pagenumbering{gobble}
+%\maketitle
+\begin{center}
+    \includegraphics[scale=0.25]{slike/logotip_vegova_leze_brezokvirja.png}
+
+	\vspace{8cm} 
+
+	Strokovno poročilo pri predmetu geografija
+
+	\Huge{\textbf{NEK}}
+
+	\normalsize
+	Okoljski in drugi vplivi nuklearne elektrarne Krško
+
+\end{center}
+\vspace{9cm}
+Avtor: Jaka Kovač, G 2. b\\
+Mentorici: Slavica Škerbot, prof. in Hana Munih, prof.\\
+\begin{center}
+	Ljubljana, maj 2022
+\end{center}
+\newpage
+\null
+\newpage
+
+\pagenumbering{arabic}
+\section*{Povzetek}
+V moji seminarski nalogi bom razmišljal o delovanju in okoljskih vplivih nuklearne elektrarne Krško. Temo sem izbral ker me jedrska energija zelo zanima in bi rad povečal ozaveščenost sošolcev o varnosti jederske energije. Prav tako bom govoril o primerjavi CO2 ekvivalent izpustov NE in ostalih elektrarn.
+\section*{Abstract}
+In my paper l'll think about the workings and the effects on surroundings of nuclear power plants. I choose the theme because I'm highly interested in nuclea energy and because I'd like to increase awareness about safety of nuclear energy. I'll also talk about the CO2 equivalent emissions of NPP and other power plants.
+\newpage
+
+
+% KAZALO 
+\tableofcontents
+\newpage
+\section{Delovanje}
+\subsection{Jedrska reakcija}
+Vsi smo že slišali Einsteinovo formulo $E = mc^2$, vendar pa res vsi vemo kaj pomeni? Če formule ne znamo prav uporabiti \footnote{Po besedah bivšega Vegovca in trenutnega strokovnjaka za relativnost in jedrsko fiziko, je tudi sam ne znam pravilno uporabljati.}, bi lahko napačno predpostavili, da povprečen človek, ki tehta 75 kg v sebi nosi $$75 \textnormal{ kg} \cdot 300.000.000 \textnormal{ } \frac{\textnormal{m}^2}{\textnormal{s}^2} = 22,5 \textnormal{ GJ}$$ energije. To je sicer res, vendar pa je večino te energije neuporabne, saj ljudje v povprečju na dan zaužijemo in porabimo 2000 kcal kar je eneako 8400 kJ oz. 0,04 \% vse energije shranjene v človeških atomih.
+Enačba deluje tudi v obratno smer. $m = \frac{E}{c^2}$ pravi, da je masa sorazmerna z energijo. Če se ($m_{clovek} = 75 \textnormal{kg}$) premikamo s $120 \textnormal{ } \frac{\textnormal{km}}{\textnormal{h}}$ je naša masa večja za $4,63 * 10^{-13} \textnormal{ kg} \approx 15,5 \textnormal{ milijard molekul } \textnormal{H}_2\textnormal{O}$.\\
+Jedrska reakcija je vsaka reakcija kjer se spreminjajo elementi. Na primer zlitje atomov vodika v atom helija v soncu, ne pa recimo fotosinteza, kjer molekula glukoze skupaj s 6 molekulami kisika ustvari 6 molekul vode in 6 molekul ogljikovega dioksida.
+V jedrskih elektrarnah se, za enkrat, uporablja samo razpad ${}^{235}\textnormal{U}$ (Uran 235).\\
+Ko se v atom urana >>zaleti<< nevton, energija v jedru preseže eksitacijsko energijo (excitation energy) in atom razpade na en atom žlahtnega plina kriptona in en atom zemljo-alkalijske kovine barija. $$ \textnormal{n}^0 + {}^{235}\textnormal{U} = {}^{92}\textnormal{Kr} + {}^{141}\textnormal{Ba} + 3\textnormal{n}^0 $$ Hkrati pa iz rekcije odleti nekaj nevtronov. Ti nevtroni lahko sprožijo nove reakcije. Temu se reče verižna jedrska reakcija.\\
+V NEK uran pridobijo v t.i. tabletkah v 1 cm dolgem, 0,5 cm širokem valju. Dve tabletki imata dovolj energije, da bi se z njo lahko vozili celo leto, ali pa za eno kurilno sezono ogrevali hišo. V NEK so tabletke pospravljene v gorivne palice, 235 teh palic in 20 regulacijskih palic pa sestavlja gorivni element. V rekaktorju v Krškem je trenutno 121 gorivnih elementov.\\
+\subsection{Vodni krogi}
+Obstaja več vrst jedrskih reaktorjev, vsak s svojimi prednostimi in slabostmi. Trenutni reaktor v Krškem je PWR (Pressure Water Reactor) oz. tlačnovodni reaktor. Taki reaktorji obratujejo s tremi krogi vode. Primarni, sekundarni in terciarni vodni krog.
+\subsubsection{Primarni krog}
+Primarni krog je namenjen ohlajanju reaktorja, saj se pri razpadu urana poleg ostalega sprosti 200 MeV (megaelektronvolt) energije. To je v bistvu zelo malo ($3,20 \cdot 10^{-11} \textnormal{ J}$) vendar, ker se takih razpadov zgodi zelo veliko se sprosti tudi (res zelo) veliko energije. Ta energija se sprosti v obliki toplote. Ta segreje vodo v primarnem krogu. Voda je tu pod zelo visokim tlakom ($P_{vode} = 15,41 \textnormal{ MPa}$), kar omogoča da je v kapljevinastem agregatnem stanju tudi pri temperaturi $T_{vode, \textnormal{ } max.} = 350 \textnormal{ °C}$. Vodi je dodana borova (III) kislina, saj pomaga pri nadzoru moči reaktorja.
+\subsubsection{Sekundarni krog}
+Sekundarni krog je namenjen proizvajanju električne energije. Od primarnega kroga je ločen zradi varnosti. Z vodo iz primarnega kroga se nikoli ne meša. V uparjanikih ohlaja vodo primarnega kroga in se pri tem spremeni v paro. Para nato poganja 730 MW generator, ki proizvaja približno 30 \% električne energije v Sloveniji.
+\subsubsection{Terciarni krog}
+Terciarni krog je namenjen hlajenju pare sekundarnega kroga. Za pravilno delovanje uparjalnikov mora biti voda sekundarnega kroga v tekočem agregatnem stanju, vendar pa je le ta ob izstopu iz turbine generatorja v obliki pare. Utekočini se v kondenzatorju, ki s pomočjo vode iz reke Save paro utekočini. Je edini krog vode kjer kroži voda iz okolja. Ostala dva sa zaradi varnosti od okolja izolirana, terciarni krog pa ne. Voda reke Save se v terciarnem krogu segreje za največ 3 °C, v primeru, da Sava nima dovolj hladilne kapacitete, se vključijo tudi hladilni stolpi ob elektrarni.
+\newpage
+\section{Ob nesreči}
+Čeprav je malo verjetno, se nesreča vseeno lahko zgodi. Zaposleni v NEK se nenehno usposabljajo za primer nesreče.
+\subsection{Potek}
+Da bi se v NE Krško zgodila večja nesreča, bi moralo hkrati odpovedati več ključnih varnostnih sistemov. V trenutku, ko bi kontrolorji ugotovili kritično odstopanje moči bi reaktor ugasnili. To se ponavadi naredi z gumbom SCRAM (mogoče: Safety Controll Rod Axe Man). Usoda NEK in dobršnega dela Slovenije bi bila določena v naslednjih trenutkih. Če so kontrolorji regirali dovolj hitro in pravilo so reaktor zaustavil pred neizbežno eksplozijo. V tem primeru bi najprej verjetno sledil pregled celotne elektrarne nato pa bi se gede na oceno inšpektojev reaktor ponovno zagnal.
+Če pa bi kontrolorji regirali prepozno in je eksplozija neizbžna, bi v čim  krajšem možnem času poskusili evakuirati delavnce NEK (razen najnujnejših) ter ostale ljudi, ki so v bližini elektrarne. Pričela bi se tudi odplrava posledic in preiskava, kaj je šlo narobe. Kljub malo verjetni nereči, že obstajajo načrti kako evakuirati ljudi. Iz zgibanke: "Kako bi ravnali v primeru nesreče?" je razvidno, da je nartovana evakuacija vseh ljudi, ki so elektrarni bližje kot 12 km. Načrtovano je tudi razdeljevanje tablet KI, ki pomagajo pri prečevanju vstopa radioaktivnih snovi v ščitnico.
+\subsection{Izobraževanje}
+Da bi preprečili hujše oblike nesreč, se kontrolorji nenehno izobražujejo. Na leto se morajo udeležiti vsaj 8 tednov izobraževanj, 4 od tega v učilnici, preostale 4 pa v kopiji kontrolne sobe, kjer virtualni reaktor reagira natanko tako kot bi pravi. Pred zaposlitvijo se zaposleni izobražujejo tudi v reaktorskem centru Inštituta Jožefa Stefana v Podgorici, kjer stoji raziskovalni reaktor TRIGA. To je reaktor, ki je prilagojen izobraževanju, njegov glavni namen je proizvodnja nevtronov za raziskovanle namene. S tem reaktorjem proizvajajo tudi radioaktivni material za rentgensko slikanje v medicini, za proizvodnjo polprevodnikov, ipd.\\
+TRIGA (Training Research Isotopes General Atomics) je reaktor ameriškega proizvajalca, ki je namenjen izobraževalnim inštitucijam, kot je IJS. V ta namen je delovanje prilagojeno neizkušenim kontrolorjem saj se nesreča kljub napaki v nadzorni sobi ne more zgoditi. To priča tudi skoraj 70 podobnih reaktorjev, ki v svoji 60 letni zgodovini niso doživeli nesreče.
+\newpage
+\section{Okoljski vplivi}
+\subsection{Minusi}
+Kljub veliko prednostim pa imajo jedrske elekrarne nekaj negativnih vplivov na okolje. Eden izmed njih je zagotovo segrevanje reke, ki je uporabljena v terciarnem krogu. NEK Savo segreje za največ 3 °C. V času pisanja te naloge je bila ta razlika 1,4 °C. 
+Druga slabost so radioaktivni odpadki. Le te je zelo težko shranjevati, saj radioaktivnost ne sme preiti v naravo. To se lahko zagotovi zamo z zelo debelimi betonskimi luknjami. VRAO pa morajo biti shranjeni v hladilnih bazenih, ker so še vedno sposobni proizvajati radioaktivno sevanje. Vsi radioaktivni odpadki, ki jih ne moremo reciklirati bodo nato za vedno (ali vsaj več tisočletji) shranjeni zaliti z betonom globoko poz zemljo.
+\subsection{Plusi}
+Jedrske elektrarne pa imajo tudi veliko koristi. Glavni izmed njih sta zanesljivost in zelo nizek izpust $\textnormal{CO}_2$. Jedrska elektrarna Krško je imela v svoji več kot 40 letni zgodovini zelo malo nenačrtovanih zaustavitev (manj kot 2 na tri leta). Nazadnje si elektrarno zaustavili ko se je zgodil potres v okolici Zagreba. \\
+NEK proizvaja približno 30 \% vse elektrike v Sloveniji, vendar izpuščajo manj kot 3 \% vseh izpustov $\textnormal{CO}_2$ ekvivalenta. Za primerjavo, kurjenje premoga proizvaja približno 15 \% vse elektrike v Sloveniji, in več kot 60 \% vseh izpustov $\textnormal{CO}_2$.\\
+Po mojih izračunih, če NEK ne bi obratoval bi v Sloveniji do sedaj izpustili XXXXXXXXX ekvivalent $\textnormal{CO}_2$.
+
+\newpage
+\section{Izpeljava formul}
+\subsection{Sprememba mase}
+$$E = mc^2$$
+$$\frac{1}{2}m \Delta v^2 = \Delta m c^2$$
+$$\Delta m = \frac{m \Delta v^2}{2 c^2}$$
+$$\Delta m = \frac{75 \textnormal{ kg} \textnormal{ } 33,33^2 \textnormal{ } \textnormal{\sout{m}}^2 \textnormal{ } \textnormal{\sout{s}}^2}{2 \textnormal{ } \textnormal{\sout{s}}^2 \cdot 300.000.000^2 \textnormal{ } \textnormal{\sout{m}}^2 }$$
+$$\Delta m = 4,63 \cdot 10^{-13} \textnormal { kg}$$
+
+\subsection{Masa v molekulah vode}
+$$ m[\textnormal{molekul vode}] = \frac{m[\textnormal{kg}]}{m(\textnormal{H}_2\textnormal{O} \textnormal{ v kilogramih})}$$
+$$ n = \frac{m}{M} = \frac{N}{N_A}$$
+$$ m \cdot N_A = N \cdot M$$
+$$ m = \frac{N \cdot M}{N_A}$$
+$$ m(\textnormal{molekule vode}) = \frac{N \cdot M(\textnormal{H}_2\textnormal{O})}{N_A}$$
+$$ m(\textnormal{molekule vode}) = \frac{1 \textnormal{ \sout{molekula}} \cdot (2 \cdot 1,008 + 15,999) \textnormal{ kg \sout{mol}}}{\textnormal{\sout{mol}} \cdot 6,023 \cdot 10^{26} \textnormal{ \sout{molekula}}}$$
+$$ m(\textnormal{molukule vode}) = 2,99 \cdot 10^{-26} \frac{\textnormal{ kg}}{\textnormal{molekulo vode}}$$
+$$ m[\textnormal{molekul vode}] = \frac{4,63 \cdot 10^{-13} \textnormal { \sout{kg} molekul vode}}{2,99 \cdot 10^{-26} \textnormal{ \sout{kg}}}$$
+$$ m[\textnormal{molekul vode}] = 1,55 \cdot 10^{13} \textnormal { molekul H}_2\textnormal{O}$$
+$$ m[\textnormal{molekul vode}] = 15,5 \cdot 10^{12} \textnormal { molekul H}_2\textnormal{O}$$
+
+
+
+\newpage
+\section{Zaključek}
+Na koncu še vedno mislim, da je jedrska energija trenutno najboljši vir energije na svetu, saj nam omogoča relativno čisti vir energije, ki je hkrati tudi zansljiv in ponavadi deluje 24/7. Poraba energije se skozi dan žal spreminja jedrske elektrarne pa svojo moč takim spremembam težko prilagajajo. To je samo eden izmed razlogov zakaj je jedrske energije tenutno zelo malo. Morda bi lahko zgradili več jedrskih elektrarn, ki bi poganjale črpalke za vodo, in bi potem ko bi potrebovali, razilko enačili z hidroelektrarnami.\\
+Kljub naši manjhnosti je Slovenija dokaj čita država, saj je naša povprečan kWh odgovorna za 150-300g CO2 ekvivalentnih izpustov, obstajajo države, ki imajo to števiko veliko višje, tudi nad 700g. Države, kor je Finska, pa na kWh izpustijo manj kot 50g CO2.
+\newpage
+\section{Viri}
+\begin{itemize}
+	\item \href{https://www.nek.si/}{https://www.nek.si/*}, dostopano 29. 4. 2022
+    \item \href{https://app.electricitymap.org}{https://app.electricitymap.org}, dostopano 29. 4. 2022
+    \item \href{https://sl.wikipedia.org/wiki/Jedrska\_elektrarna\_Krško}{https://sl.wikipedia.org/wiki/Jedrska\_elektrarna\_Krško}, dostopano 8. 5. 2022
+    \item Simon Singh: Veliki pok, Založba Učila, 2008
+    \item \href{https://sl.wikipedia.org/wiki/Jedrsko\_zlivanje}{https://sl.wikipedia.org/wiki/Jedrsko\_zlivanje}, dostopano 8. 5. 2022
+    \item Zbirka zloženk ARAO in IJS, Ljubljana, 2011 
+    \item Radko Istenič: Mala enciklopedija jedrske energije, IJS, Ljubljana, 2013 
+    \item Brošura: Kako bi ravnali v primeru jedrske nesreče, NEK, Krško, 2014
+\end{itemize}
+\end{document}
